@@ -1,6 +1,6 @@
 (ns dirmailops.advisor-test
   "Unit tests of `dirmailops.advisor` proposal generation."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.lang.text] [clojure.test :refer [deftest is testing]]
             [dirmailops.advisor :as adv]
             [dirmailops.store :as store]))
 
@@ -66,7 +66,7 @@
     (doseq [op [:log-listing-record :schedule-publication-operation
                 :coordinate-distribution :flag-privacy-concern]]
       (let [p (adv/infer db {:op op :listing-id "listing-1" :patch {:concern "opt-out request"}})
-            blob (clojure.string/lower-case (pr-str (select-keys p [:summary :rationale :value])))]
-        (is (not (clojure.string/includes? blob "gdpr")))
-        (is (not (clojure.string/includes? blob "compliance decision")))
-        (is (not (clojure.string/includes? blob "deletion request resolved")))))))
+            blob (kotoba.lang.text/lower (pr-str (select-keys p [:summary :rationale :value])))]
+        (is (not (kotoba.lang.text/includes? blob "gdpr")))
+        (is (not (kotoba.lang.text/includes? blob "compliance decision")))
+        (is (not (kotoba.lang.text/includes? blob "deletion request resolved")))))))
