@@ -5,7 +5,7 @@ operations coordination only, with CRITICAL exclusions of directly
 finalizing a data-privacy-compliance decision (see README.md).
 
 - All code must be .cljc (portable Clojure, no JVM-only constructs).
-- Tests must pass: clojure -M:test
+- Tests must pass: kbb -M:test
 - Commit messages should link to relevant ADRs or issues.
 
 **This actor does NOT:**

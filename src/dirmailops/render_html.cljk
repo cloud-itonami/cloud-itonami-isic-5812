@@ -32,7 +32,7 @@
   works, so the HARD-hold coverage is enforced by the build rather than
   by convention (precedent: cloud-itonami-isic-2513).
 
-  Usage: `clojure -M:dev:render-html [out-file]`
+  Usage: `kbb -M:dev:render-html [out-file]`
   (default `docs/samples/operator-console.html`)."
   (:require [kotoba.lang.text :as str]
             [jp-go-dds.skin]
@@ -498,7 +498,7 @@
      "<p><span class=\"badge\">read-only sample</span> <span class=\"badge\">governor-gated</span> "
      "<span class=\"badge\">privacy-compliance decisions permanently out of scope</span></p>\n"
      "<p class=\"subtitle\">Generated at build time by <code>dirmailops.render-html</code> "
-     "(<code>clojure -M:dev:render-html</code>) by actually running the actor: "
+     "(<code>kbb -M:dev:render-html</code>) by actually running the actor: "
      (esc (count scenarios)) " requests through <code>dirmailops.operation</code>&rsquo;s StateGraph, producing "
      (esc commits) " commits and <strong>" (esc holds) " governor holds</strong>. "
      "Nothing below is hand-written; the build refuses to emit this page if the run produces zero holds.</p>\n"
@@ -518,7 +518,7 @@
      "governor decides whether that proposal may touch the SSoT. Scenarios s10&ndash;s12 above "
      "run a deliberately tampered advisor to show the governor rejecting it.</p>\n"
      "  <p>Deterministic: no timestamps, no random ids, no unordered traversal — two runs of "
-     "<code>clojure -M:dev:render-html</code> against the same seed are byte-identical.</p>\n"
+     "<code>kbb -M:dev:render-html</code> against the same seed are byte-identical.</p>\n"
      "</footer>\n"
      "</body></html>\n")))
 

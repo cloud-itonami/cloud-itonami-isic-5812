@@ -2472,7 +2472,7 @@ img,svg { max-width: 100%; height: auto; }
   <h1>Publishing of directories and mailing lists (ISIC 5812) — Operator Console</h1>
 </header>
 <p><span class="badge">read-only sample</span> <span class="badge">governor-gated</span> <span class="badge">privacy-compliance decisions permanently out of scope</span></p>
-<p class="subtitle">Generated at build time by <code>dirmailops.render-html</code> (<code>clojure -M:dev:render-html</code>) by actually running the actor: 13 requests through <code>dirmailops.operation</code>&rsquo;s StateGraph, producing 5 commits and <strong>6 governor holds</strong>. Nothing below is hand-written; the build refuses to emit this page if the run produces zero holds.</p>
+<p class="subtitle">Generated at build time by <code>dirmailops.render-html</code> (<code>kbb -M:dev:render-html</code>) by actually running the actor: 13 requests through <code>dirmailops.operation</code>&rsquo;s StateGraph, producing 5 commits and <strong>6 governor holds</strong>. Nothing below is hand-written; the build refuses to emit this page if the run produces zero holds.</p>
 <main>
   <section class="card">
     <h2>Directory &amp; mailing-list records (SSoT)</h2>
@@ -2592,6 +2592,6 @@ img,svg { max-width: 100%; height: auto; }
 </main>
 <footer>
   <p>cloud-itonami-isic-5812 &middot; DirMailAdvisor &#8867; DirMailGovernor. The advisor is smart-but-untrusted: it only ever emits a proposal, and an independent governor decides whether that proposal may touch the SSoT. Scenarios s10&ndash;s12 above run a deliberately tampered advisor to show the governor rejecting it.</p>
-  <p>Deterministic: no timestamps, no random ids, no unordered traversal — two runs of <code>clojure -M:dev:render-html</code> against the same seed are byte-identical.</p>
+  <p>Deterministic: no timestamps, no random ids, no unordered traversal — two runs of <code>kbb -M:dev:render-html</code> against the same seed are byte-identical.</p>
 </footer>
 </body></html>
