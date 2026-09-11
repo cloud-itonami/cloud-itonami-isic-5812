@@ -48,11 +48,11 @@ clojure -M:run
 
 ## Test suite
 
-- `test/dirmailops/governor_test.clj` — unit tests of governor hard checks and scope exclusion
-- `test/dirmailops/advisor_test.clj` — advisor proposal shape and consistency
-- `test/dirmailops/phase_test.clj` — rollout phase logic
-- `test/dirmailops/governor_contract_test.clj` — full graph integration, audit trail
-- `test/dirmailops/store_contract_test.clj` — Store protocol and MemStore implementation
+- `test/dirmailops/governor_test.cljk` — unit tests of governor hard checks and scope exclusion
+- `test/dirmailops/advisor_test.cljk` — advisor proposal shape and consistency
+- `test/dirmailops/phase_test.cljk` — rollout phase logic
+- `test/dirmailops/governor_contract_test.cljk` — full graph integration, audit trail
+- `test/dirmailops/store_contract_test.cljk` — Store protocol and MemStore implementation
 
 ## Modules
 
