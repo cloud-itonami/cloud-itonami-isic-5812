@@ -1,6 +1,6 @@
 (ns dirmailops.advisor-test
   "Unit tests of `dirmailops.advisor` proposal generation."
-  (:require [kotoba.lang.text] [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.lang.text] [kotoba.test :refer [deftest is testing]]
             [dirmailops.advisor :as adv]
             [dirmailops.store :as store]))
 

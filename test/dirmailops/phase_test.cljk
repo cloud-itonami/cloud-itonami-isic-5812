@@ -1,6 +1,6 @@
 (ns dirmailops.phase-test
   "Unit tests of `dirmailops.phase` rollout logic."
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [dirmailops.phase :as phase]))
 
 (def clean-verdict {:hard? false :escalate? false})
